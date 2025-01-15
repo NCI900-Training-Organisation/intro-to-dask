@@ -2,13 +2,13 @@ Learning Outcomes
 =================
 
 .. note::
- 1.  Learn how to parallelise Python code using Numba.
- 2.  Learn how to use GPUs in Numba. 
+    1.  Learn the basics of Dask.
+    2.  Learn how to use distributed Dask in an HPC machine.
+    3.  Learn how to use machine learning algorithms in Dask.
 
-In this tutorial, we will learn how to use Numba to speed up Python code. Numba is a just-in-time 
-compiler that translates Python functions into machine code, which can significantly boost performance
-for numerical and scientific tasks. We will cover the basics of applying Numba's features, optimizing
-functions, and integrating with libraries like NumPy. By the end, you'll understand how to use Numba
-to improve your code's efficiency and performance.
+In this tutorial, we will learn how to use Dask to scale Python code for parallel and distributed computing. Dask is a flexible parallel computing 
+library that enables efficient processing of large datasets and complex workflows on a single machine or a cluster. We will cover the basics of Dask's 
+features, building and optimizing task graphs, and integrating with libraries like NumPy and pandas. By the end, you'll understand how to use Dask 
+to enhance your code's scalability and performance.
 
 
