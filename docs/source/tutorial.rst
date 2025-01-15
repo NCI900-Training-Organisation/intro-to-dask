@@ -17,19 +17,23 @@ will be provided for you during the session.
     tutorial/vectorize
     
 
-Tutorial (GPU)
-==============
+Distributed Dask
+================
 
 .. toctree::
 
-    tutorial/GPU/gpu_intro
-    tutorial/GPU/gpu_mem
-    tutorial/GPU/gpu_streams
-    tutorial/GPU/gpu_vect
-    tutorial/GPU/gpu_reduction
+    tutorial/Dist/dist_intro
+
+Dask-ML
+=======
+
+.. toctree::
+
+    tutorial/Ml/dask_ml_intro
+
     
 
-GitHub Repo: https://github.com/NCI900-Training-Organisation/intro-to-numba.git
+GitHub Repo: https://github.com/NCI900-Training-Organisation/intro-to-dask.git
 
 
 
