@@ -2,11 +2,18 @@ Python Virtual Environment
 ==========================
 
 .. note::
- 1.  python-papi
- 2.  numpy
- 3.  codetiming
- 4.  numba
- 5.  mpi4py
+
+ 1. numpy
+ 2. dask[complete]
+ 2. dask distributed 
+ 4. dask-jobqueue
+ 5. dask_labextension
+ 6. pyarrow
+ 7. s3fs
+ 8. graphviz
+ 9. scikit-learn
+ 10. dask-ml
+ 11. matplotlib
 
 In this workshop, we will use a Python virtual environment to manage all the required Python packages.
 A Python virtual environment is an isolated workspace that allows you to manage project-specific dependencies without affecting the global Python installation or other projects. By creating a 

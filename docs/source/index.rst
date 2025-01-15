@@ -1,8 +1,8 @@
-Introduction to Numba
+Introduction to Dask
 =====================
 
-This repository provides a comprehensive guide to understanding and utilizing Numba, a Just-in-Time (JIT) 
-compiler for Python that is designed to speed up numerical and scientific computing.
+This repository provides a comprehensive guide to understanding and utilizing Dask, a parallel computing library for Python that is 
+designed to scale data analysis and computation workflows from a single machine to a cluster.
 
 .. note::
 
