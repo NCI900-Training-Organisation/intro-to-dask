@@ -17,10 +17,12 @@ Contents
  
    * - Topics
      - Duration
-   * - CPU Parallelisation
+   * - Dask
      - 1.5 Hours
-   * - GPU Parallelisation
+   * - Dask Distributed
      - 1.5 Hours
+   * - Dask-ML
+     - 3 Hours
 
 
 

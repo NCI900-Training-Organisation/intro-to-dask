@@ -10,8 +10,6 @@ will be provided for you during the session.
     tutorial/Dask/dataframe
     tutorial/Dask/delayed
     tutorial/Dask/futures
-    tutorial/Dist/dist_intro.rst
-
     
 
 Distributed Dask
