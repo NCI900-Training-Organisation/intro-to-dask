@@ -10,6 +10,7 @@ will be provided for you during the session.
     tutorial/Dask/collections
     tutorial/Dask/dataframe
     tutorial/Dask/delayed
+    tutorial/Dask/futures
 
     
 
