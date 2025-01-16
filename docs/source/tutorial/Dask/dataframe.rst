@@ -14,6 +14,8 @@ Dask DataFrame is a large-scale, parallelized version of the pandas DataFrame, d
 to be distributed across multiple machines. It provides a similar API to **pandas**, making it easy for users familiar with pandas to scale their 
 workflows to larger datasets.
 
+.. image:: ../../figs/dataframe.png
+
 Key Features of Dask DataFrame:
 1. **Distributed Computation: ** Dask DataFrame splits data into partitions that can be processed in parallel across multiple CPU cores or machines in a distributed cluster.
 Each partition is a pandas DataFrame, and operations are executed lazily on these partitions.
