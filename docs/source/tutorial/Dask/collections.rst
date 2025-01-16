@@ -16,13 +16,10 @@ distributed computations. They represent large datasets or computations and oper
 immediately.
 
 
-Dask Array
------------
-
-Dask Array implements a subset of the NumPy ndarray interface using blocked algorithms, cutting up the large array into many small arrays. 
+**Dask Array** implements a subset of the NumPy ndarray interface using blocked algorithms, cutting up the large array into many small arrays. 
 This lets us compute on arrays larger than memory using all of our cores. We coordinate these blocked algorithms using Dask graphs.
 
-.. image:: ../../figs/dask_arrys.png
+.. image:: ../../figs/dask_arrays.png
 
 
 Dask Arrays are a high-level collection in Dask designed for parallel and distributed computation on large, multi-dimensional arrays. 

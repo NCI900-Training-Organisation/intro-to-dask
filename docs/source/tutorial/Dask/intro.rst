@@ -17,10 +17,7 @@ like NumPy, Pandas, and Scikit-Learn, offering parallelized versions of their AP
 maintaining a familiar workflow.
 
 
-Task Graphs
------------
-
-Task scheduling is a common approach to parallel execution, where programs are divided into medium-sized tasks represented as nodes in a graph, 
+**Task Graphs: ** Task scheduling is a common approach to parallel execution, where programs are divided into medium-sized tasks represented as nodes in a graph, 
 with edges indicating dependencies. A task scheduler executes this graph, respecting dependencies and maximizing parallelism by running 
 independent tasks simultaneously. 
 
