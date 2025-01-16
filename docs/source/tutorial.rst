@@ -5,12 +5,12 @@ In this tutorial, we'll be using the Gadi HPC machine at NCI. A Python virtual e
 will be provided for you during the session.
 
 .. toctree::
-
     tutorial/Dask/intro
     tutorial/Dask/collections
     tutorial/Dask/dataframe
     tutorial/Dask/delayed
     tutorial/Dask/futures
+    tutorial/Dist/dist_intro.rst
 
     
 
@@ -18,8 +18,7 @@ Distributed Dask
 ================
 
 .. toctree::
-
-    tutorial/Dist/dist_intro
+    tutorial/DistDask/dist_intro.rst
 
 Dask-ML
 =======
