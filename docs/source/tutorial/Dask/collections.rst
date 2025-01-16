@@ -85,7 +85,9 @@ Choosing Chunk Sizes
 Choosing the right chunk size depends on the use case:
 
 1. **Small Enough to Fit in Memory:** Each chunk should be small enough to fit comfortably in memory (e.g., 10–100 MB per chunk is a good starting point).
+
 2. **Large Enough to Minimize Overhead:** Very small chunks increase task graph overhead because managing too many tasks becomes inefficient. Strike a balance to avoid excessive task scheduling.
+
 3. **Workload-Specific:** The chunk shape may vary depending on the operation. 
 
 How does `compute()` work?
@@ -97,8 +99,11 @@ Dask to optimize the computation and schedule tasks efficiently.
 
 
 1. **Builds a Task Graph:** Operations on Dask collections create a task graph, which defines the computation workflow in terms of dependencies between tasks.
+
 2. **Schedules the Tasks:** When .compute() is called, Dask uses a scheduler to orchestrate the execution of tasks in the graph. It ensures tasks are executed in the right order while maximizing parallelism.
+
 3. **Executes Tasks:** Each task processes a chunk of data, and intermediate results are combined as needed.
+
 4. **Returns Results:** The final output is collected and returned as a familiar Python object, like a NumPy array, pandas DataFrame, or a regular Python list.
 
 ..  code-block:: python
