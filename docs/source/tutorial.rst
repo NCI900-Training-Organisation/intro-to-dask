@@ -1,20 +1,13 @@
-Tutorial (CPU)
-==============
+Dask 
+=====
 
 In this tutorial, we'll be using the Gadi HPC machine at NCI. A Python virtual environment 
 will be provided for you during the session.
 
 .. toctree::
 
-    tutorial/intro
-    tutorial/llvm
-    tutorial/eager
-    tutorial/compiler_mode
-    tutorial/no_gil
-    tutorial/cache
-    tutorial/parallel
-    tutorial/ufunc
-    tutorial/vectorize
+    tutorial/Dask/intro
+
     
 
 Distributed Dask
