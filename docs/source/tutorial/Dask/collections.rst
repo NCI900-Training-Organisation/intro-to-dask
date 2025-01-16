@@ -4,7 +4,7 @@ Dask Arrays
 .. admonition:: Overview
    :class: Overview
 
-    * **Tutorial:** 10 min
+    * **Tutorial:** 20 min
 
         **Objectives:**
             #. Learn about Dask collections.
@@ -26,7 +26,9 @@ Dask Arrays are a high-level collection in Dask designed for parallel and distri
 They provide functionality similar to NumPy arrays but break the data into smaller chunks (sub-arrays), each of which can be processed independently. 
 These chunks are distributed across multiple cores or machines, allowing Dask Arrays to handle datasets that are too large to fit into memory.
 
-**Relationship to NumPy Arrays: **
+Relationship to NumPy Arrays 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 Dask Arrays are deeply integrated with NumPy and designed to feel like an extension of it:
 
 1. **API Compatibility**: Dask Arrays use an API that is nearly identical to NumPy's, so operations like slicing, reshaping, arithmetic, and linear 
