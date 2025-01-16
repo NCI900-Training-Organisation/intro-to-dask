@@ -41,14 +41,14 @@ This deferred computation helps optimize resource usage and parallelism.
 machines in a cluster, allowing them to handle datasets much larger than what NumPy can process.
 
 When to Use Dask Arrays
-------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1. **Large Datasets:** When your arrays are too large to fit into memory.
 2. **Parallelism:** When you want to speed up array computations using multiple cores or machines.
 3. **Distributed Computing:** When your computations need to be distributed across a cluster
 
 Comparisson between Numpy and Dask Array
-----------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ..  code-block:: python
     :linenos:
@@ -78,7 +78,7 @@ Additionally, chunks enable Dask to handle datasets larger than the available RA
 as needed.
 
 Choosing Chunk Sizes
----------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Choosing the right chunk size depends on the use case:
 
@@ -87,7 +87,7 @@ Choosing the right chunk size depends on the use case:
 3. **Workload-Specific:** The chunk shape may vary depending on the operation. 
 
 How does `compute()` work?
----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In Dask, the .compute() method triggers the actual execution of a computation. When you perform operations on Dask collections, Dask doesn't compute 
 the results immediately. Instead, it builds a task graph that represents the steps required to complete the computation. This lazy evaluation allows 
@@ -114,7 +114,8 @@ Dask to optimize the computation and schedule tasks efficiently.
     result = y.compute()
 
 How does `visualize()` work?
----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 The `.visualize()` method in Dask is used to generate a visual representation of the task graph that Dask constructs during the computation process. 
 This graphical representation helps users understand how Dask is planning to execute the computation and visualize the flow of tasks, their 
 dependencies, and how they are parallelized. It can be especially useful for debugging or optimizing workflows.
