@@ -7,6 +7,7 @@ will be provided for you during the session.
 .. toctree::
 
     tutorial/Dask/intro
+    tutorial/Dask/collections
 
     
 

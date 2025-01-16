@@ -1,4 +1,4 @@
-Dask Basics
+Task Graphs
 ------------
 
 .. admonition:: Overview
@@ -7,8 +7,7 @@ Dask Basics
     * **Tutorial:** 10 min
 
         **Objectives:**
-            #. Learn about Dask.
-            #. Learn about Dask collections.
+            #. Learn about Dask task graphs.
 
 
 Dask is a Python library for parallel and distributed computing that is easy to use and set up, as it functions just like any other Python library. 
@@ -25,7 +24,7 @@ Task scheduling is a common approach to parallel execution, where programs are d
 with edges indicating dependencies. A task scheduler executes this graph, respecting dependencies and maximizing parallelism by running 
 independent tasks simultaneously. 
 
-.. image:: ../figs/task_graph.png
+.. image:: ../../figs/task_graph.png
 
 Dask simplifies task scheduling in Python, using familiar constructs like dicts, tuples, and callables to 
 encode computations with minimal complexity. A sample Dask graph is shown below
