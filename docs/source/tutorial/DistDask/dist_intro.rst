@@ -128,6 +128,8 @@ like temporary storage (`$TMPDIR`) and high-speed network communication (`ib0`).
 Dask workers via PBS jobs, enabling distributed and parallel computations, and connects to the 
 workers using a Python client.
 
+.. image:: ../../figs/cluster.png
+
 .. admonition:: Explanation
    :class: attention
 
