@@ -137,7 +137,7 @@ workers using a Python client.
    2. `cores`: Specifies the number of CPU cores allocated per job. Each Dask worker will 
    utilize 48 cores for parallel processing.
 
-   3. **memory**: Specifies the total memory available for each job. Each worker will use up to 
+   3. `memory`: Specifies the total memory available for each job. Each worker will use up to 
    192 GB of RAM.
 
    4. `shebang`: Defines the shebang line at the top of the job script, indicating that the script should be executed using bash.
