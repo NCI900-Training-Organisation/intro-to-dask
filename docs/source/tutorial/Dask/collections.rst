@@ -27,7 +27,7 @@ They provide functionality similar to NumPy arrays but break the data into small
 These chunks are distributed across multiple cores or machines, allowing Dask Arrays to handle datasets that are too large to fit into memory.
 
 Relationship to NumPy Arrays 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Dask Arrays are deeply integrated with NumPy and designed to feel like an extension of it:
 
@@ -43,14 +43,14 @@ This deferred computation helps optimize resource usage and parallelism.
 machines in a cluster, allowing them to handle datasets much larger than what NumPy can process.
 
 When to Use Dask Arrays
-^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. **Large Datasets:** When your arrays are too large to fit into memory.
 2. **Parallelism:** When you want to speed up array computations using multiple cores or machines.
 3. **Distributed Computing:** When your computations need to be distributed across a cluster
 
 Comparisson between Numpy and Dask Array
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: python
     :linenos:
@@ -80,7 +80,7 @@ Additionally, chunks enable Dask to handle datasets larger than the available RA
 as needed.
 
 Choosing Chunk Sizes
-^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Choosing the right chunk size depends on the use case:
 
@@ -121,7 +121,7 @@ Dask to optimize the computation and schedule tasks efficiently.
     result = y.compute()
 
 How does `visualize()` work?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The `.visualize()` method in Dask is used to generate a visual representation of the task graph that Dask constructs during the computation process. 
 This graphical representation helps users understand how Dask is planning to execute the computation and visualize the flow of tasks, their 

@@ -15,7 +15,7 @@ a result that is being computed asynchronously. A future is created when you sub
 once the computation completes. Futures allow you to execute computations in parallel while controlling when and how to access the results.
 
 Key Concepts of Dask Futures
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. **Asynchronous Computation:** Futures in Dask represent tasks that are being computed asynchronously. They don’t block the rest of your program, allowing you to continue with other work while waiting for the result.
 When you submit a task, Dask schedules it to run on available workers. A Future object is returned, which represents the eventual result of that task.
@@ -31,7 +31,7 @@ When you submit a task, Dask schedules it to run on available workers. A Future 
 6. **Interaction with dask.delayed():** Futures can be integrated with higher-level Dask abstractions like `dask.delayed()` to perform asynchronous computations. You can submit delayed tasks to a Dask scheduler and get back future objects that you can use to monitor or collect results when they are ready.
 
 How to Use Dask Futures
-^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. **Submitting Tasks:** To create a future, you can use the submit() function from Dask's Client. This function schedules a computation to be executed on a worker and returns a future representing the result.
 
@@ -61,7 +61,7 @@ How to Use Dask Futures
     result = future.result()
 
 Key Methods with Dask Futures
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. `submit()`: Schedules a task for execution on a Dask worker and returns a future.
 

@@ -15,7 +15,7 @@ lazy, deferred computations. It allows you to build complex workflows by delayin
 explicitly requested (e.g., with `.compute()`), enabling you to perform operations in parallel without needing to modify your existing code significantly.
 
 Key Concepts of Dask Delayed
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. **Lazy Evaluation: ** When you wrap a function with `dask.delayed()`, the function is not executed immediately. Instead, a task graph is built that represents the function and its dependencies.
 The actual computation is triggered when you call `.compute()`, which runs the task graph.
@@ -26,8 +26,8 @@ The actual computation is triggered when you call `.compute()`, which runs the t
 
 4. **Minimal Overhead: ** Dask Delayed introduces minimal overhead when applied to regular Python functions, making it a flexible tool to scale up existing Python workflows without requiring major changes
 
-How to Use Dask Delayed
-^^^^^^^^^^^^^^^^^^^^^^^^
+How to Use Dask Delayed?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. **Wrap Python Functions: ** You can wrap normal Python functions (such as those performing I/O, mathematical computations, or data processing) in dask.delayed().
 These functions remain unchanged but are delayed for execution until .compute() is called.
@@ -64,7 +64,7 @@ These functions remain unchanged but are delayed for execution until .compute() 
 
 
 Key Advantages
-^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 1. **Minimal Changes to Code: ** You can easily parallelize your existing code without requiring a major rewrite. Just decorate your functions with dask.delayed() and chain them together.
 
 2. **Fine-Grained Control: ** Unlike higher-level collections like Dask DataFrame or Array, Dask Delayed gives you fine-grained control over how your computations are parallelized. You can handle more custom workflows that don’t fit neatly into the other Dask collections.

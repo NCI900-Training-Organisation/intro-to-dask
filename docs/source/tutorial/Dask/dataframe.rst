@@ -47,7 +47,7 @@ However, not all pandas operations are supported, particularly those that are di
 
 
 Dask DataFrame vs. Pandas DataFrame
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 1. **Scale:** Dask DataFrame can scale beyond memory by using partitions, while pandas DataFrame is limited by the available system memory.
 
 2. **Lazy Evaluation:** Dask uses lazy evaluation, so computations are deferred until `.compute()` is called. Pandas executes operations immediately.
@@ -55,7 +55,7 @@ Dask DataFrame vs. Pandas DataFrame
 3. **Parallelism:** Dask DataFrame leverages parallel and distributed execution, making it more suitable for large-scale computations compared to pandas.
 
 When to Use Dask DataFrame
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. **Large Datasets: ** When working with datasets that are too large to fit into memory on a single machine.
 

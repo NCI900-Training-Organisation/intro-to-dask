@@ -28,7 +28,7 @@ shrinks as tasks are completed or discarded.
 
 
 Local cluster
-^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~
 
 A local cluster in Dask refers to running Dask's distributed computing framework on your local machine, using multiple processes or threads for 
 parallelism without needing a distributed system or cluster of remote machines. It allows you to take advantage of multiple CPU cores on a 
@@ -51,9 +51,20 @@ single machine to parallelize tasks and scale computations for large datasets.
     # Get the result once the task is complete
     result = future.result()
 
+.. admonition:: Explanation
+   :class: attention
+
+        `n_workers` is a parameter of the LocalCluster class that specifies the number of worker processes 
+        to create in the local Dask cluster. Each worker process is responsible for executing tasks 
+        independently, allowing parallel computation across multiple cores on the same machine.
 
 PBS cluster
-^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~
+
+HPC systems typically use a job scheduler like SLURM, PBS, or SGE to manage compute resources. Gadi uses
+a modified version of PBS. Each job request specifies the number of nodes, cores, memory, and wall 
+time required for a computation. Dask integrates with these schedulers to distribute workloads 
+efficiently across the allocated resources.
 
 
 
