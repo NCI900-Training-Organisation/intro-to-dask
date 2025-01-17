@@ -2,8 +2,8 @@
 
 # -- Project information
 
-project = 'Introduction to Numba'
-copyright = '2024, National Computational Infrastructure'
+project = 'Introduction to Dask'
+copyright = '2025, National Computational Infrastructure'
 author = 'Joseph John'
 
 release = '0.1'
