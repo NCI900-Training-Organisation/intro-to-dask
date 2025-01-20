@@ -1,5 +1,5 @@
 Hyper Parameter Search
--------
+----------------------
 
 .. admonition:: Overview
    :class: Overview
