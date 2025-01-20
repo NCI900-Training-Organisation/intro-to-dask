@@ -1,94 +1,91 @@
-CUDA and Numba
---------------------------
+Dask ML
+-------
 
 .. admonition:: Overview
    :class: Overview
 
-    * **Tutorial:** 20 min
+    * **Tutorial:** 10 Minutes
 
         **Objectives:**
-            #. Learn how target GPUs using Numba.
-
-Kernel Function
-****************
-
-A kernel function is a GPU function called from CPU code that cannot return values directly.
-It also define how GPU threads hierarchy (threads, blocks and grids) is used. 
-
-..  code-block:: python
-    :emphasize-lines: 1
-    :linenos:
-
-    @cuda.jit
-    def polar_to_cartesian(rho, theta):
-        x = rho * math.cos(theta)
-        y = rho * math.sin(theta)
-
-Device Functions
-****************
-
-Device functions are used to perform computations on the GPU, and they can be invoked from within 
-other device functions or kernels. Unlike a kernel function, a device function can return a value
-like normal functions.
+            #. Learn how to scale Machine learning codes using dask.
 
 
-..  code-block:: python
-    :emphasize-lines: 1
-    :linenos:
+Dask-ML provides scalable machine learning in Python using Dask alongside popular machine learning 
+libraries like Scikit-Learn, XGBoost, and others.  
 
-    @cuda.jit(device=True) 
-    def polar_to_cartesian(rho, theta):
-        x = rho * math.cos(theta)
-        y = rho * math.sin(theta)
-        return x, y
+Dimensions of Scale
+~~~~~~~~~~~~~~~~~~~~
 
-`@vectorize` can also target GPU.
+.. image:: ../../figs/dimension.png
 
-..  code-block:: python
-    :emphasize-lines: 1
-    :linenos:
+Challenge 1: Scaling Model Size
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    @cuda.jit(device=True)
-    def polar_to_cartesian(rho, theta):
-        x = rho * math.cos(theta)
-        y = rho * math.sin(theta)
-        return x, y  
+One type of scaling challenge arises when models become so large or complex that they significantly impact workflow efficiency. In this scenario, 
+tasks such as model training, prediction, or evaluation may eventually complete but take an impractically long time. This situation indicates being 
+compute-bound.  To address this, you can optimize your workflow by leveraging parallel processing techniques, enabling computations to be distributed 
+across multiple cores or machines. 
 
-    @vectorize(['float32(float32, float32, float32, float32)'], target='cuda')
-    def polar_distance(rho1, theta1, rho2, theta2):
-        x1, y1 = polar_to_cartesian(rho1, theta1)
-        x2, y2 = polar_to_cartesian(rho2, theta2)
+Challenge 2: Scaling Data Size
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-        return ((x1 - x2)**2 + (y1 - y2)**2)**0.5
+Another common scaling challenge occurs when datasets grow too large to fit into memory. In such cases, even loading the data into standard in-memory 
+structures like arrays or dataframes becomes unfeasible. One way way to address this challenge is by breaking them into manageable chunks, 
+allowing preprocessing, training, and other operations to be performed efficiently. 
 
+Dask-ML can effectively address both challenges. To tackle the first challenge, a Dask cluster can be used to parallelize existing machine learning 
+algorithms across multiple machines, significantly speeding up computation. For the second challenge, Dask leverages its high-level collections, 
+such as Dask Arrays and Dask DataFrames, which are designed to span an entire cluster, enabling efficient processing of datasets that exceed memory 
+limitations.
 
-Thread Indexing
-****************
+Dask and Scikit-Learn
+~~~~~~~~~~~~~~~~~~~~~~~
 
-When launching a kernel, you should also specify the thread arrangements.
+Dask-ML and scikit-learn are closely related, as Dask-ML extends the functionality of scikit-learn to handle large datasets and distributed computing. 
+While scikit-learn is a widely used library for machine learning with a focus on single-machine performance and ease of use, it can struggle with 
+scaling to datasets that exceed memory limits. Dask-ML addresses this limitation by integrating with Dask, to enable 
+distributed and scalable machine learning workflows. 
+
+Dask-MLprovides drop-in replacements for many scikit-learn estimators, such as linear regression and 
+clustering, while maintaining scikit-learn's familiar API. This allows users to leverage scikit-learn's simplicity and versatility while scaling their 
+computations across multiple cores or even a distributed cluster, making Dask-ML ideal for handling big data challenges in machine learning.
+
+For instance, the codes snippets given below shows how a dummy data set generation will look line in Scikit-Learn and Dask-ML
 
 ..  code-block:: python
     :linenos:
 
-    @cuda.jit
-    def increment_a_2D_array(an_array):
-        x, y = cuda.grid(2)
-        if x < an_array.shape[0] and y < an_array.shape[1]:
-           an_array[x, y] += 1
+    import numpy as np
+    from sklearn.datasets import make_regression
+    from sklearn.model_selection import train_test_split
 
-    threadsperblock = (16, 16)
-    blockspergrid_x = math.ceil(an_array.shape[0] / threadsperblock[0])
-    blockspergrid_y = math.ceil(an_array.shape[1] / threadsperblock[1])
-    blockspergrid = (blockspergrid_x, blockspergrid_y)
-    increment_a_2D_array[blockspergrid, threadsperblock](an_array)
+    # Generate a regression dataset with NumPy
+    X, y = make_regression(n_samples=125, n_features=4, random_state=0)
 
-You can learn more about thread indexing in the tutorial 
-`Introduction to Parallel Programming Using Python <https://intro-to-parallel-programming.readthedocs.io/en/latest>`_ .
-    
+    # Split the dataset into training and testing sets
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=42)
+
+..  code-block:: python
+    :linenos:
+
+    import dask.array as da
+    from dask_ml.datasets import make_regression
+    from dask_ml.model_selection import train_test_split
+
+    # Generate a regression dataset with Dask array
+    X, y = make_regression(n_samples=125, n_features=4, random_state=0, chunks=50)
+
+    # Split the dataset into training and testing sets
+    X_train, X_test, y_train, y_test = train_test_split(X, y)
+
+
+Some of the main use cases of using Dask-ML is discussed below.
+
 
 
 .. admonition:: Key Points
    :class: hint
 
-    #. `@vectorize` can target GPUs.
-    #. Device functions can only be invoked from another device functions or kernel functions.
+    #. Dask-ML can be used to scale compute intensive ML jobs.
+    #. Dask-ML can be used to scale memory intensive ML jobs.
+    #. Dask-ML works with most Scikit-Learn APIs. 
