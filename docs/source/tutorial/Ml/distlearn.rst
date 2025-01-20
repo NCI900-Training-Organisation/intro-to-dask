@@ -27,39 +27,39 @@ the workers, and training happens concurrently across the distributed setup.
     from sklearn.linear_model import SGDClassifier
     from dask_ml.model_selection import GridSearchCV
     from scipy.stats import uniform, loguniform
-    
+
     # Step 1: Start a Dask client
     client = Client()
-    
+
     # Step 2: Create a synthetic classification dataset with Dask
     X, y = make_classification(n_samples=5000, n_features=20, chunks=25, random_state=0)
-    
+
     # Step 3: Split the dataset into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y)
-    
+
     # Step 4: Initialize the estimator (SGDClassifier)
     estimator = SGDClassifier(random_state=10, max_iter=100)
-    
+
     # Step 5: Define the parameter grid for hyperparameter tuning
     params = {
         'alpha': loguniform(1e-5, 1e-1),
         'l1_ratio': uniform(0, 1)
     }
-    
+
     # Step 6: Set up GridSearchCV using Dask-ML to distribute hyperparameter search
     search = GridSearchCV(estimator, params, cv=3)
-    
+
     # Step 7: Fit the model (this will distribute the computation across the Dask cluster)
     search.fit(X_train, y_train)
-    
+
     # Step 8: Output the best hyperparameters and best score
     print("Best parameters:", search.best_params_)
     print("Best score:", search.best_score_)
-    
+
     # Step 9: Evaluate the model on the test set
     test_score = search.score(X_test, y_test)
     print("Test score:", test_score)
-    
+
     # Close the Dask client when done
     client.close()
 
@@ -68,4 +68,4 @@ the workers, and training happens concurrently across the distributed setup.
 .. admonition:: Key Points
    :class: hint
 
-    #. `Incremental` can be used for incremental learning in Dask.
+    #. Distributed learning can help with large dataset in Dask..

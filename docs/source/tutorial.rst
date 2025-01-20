@@ -28,6 +28,7 @@ Dask-ML
     tutorial/Ml/hyper.rst 
     tutorial/Ml/postfit.rst
     tutorial/Ml/inc.rst
+    tutorial/Ml/distlearn.rst
 
     
 
