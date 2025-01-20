@@ -34,6 +34,10 @@ Here we a first generate a small training data
 You instantiate the underlying estimator as usual, we can also use the regular `.fit` method. Dask-ML handles passing each block of the data to 
 the underlying estimator automatically.
 
+ncremental learning is particularly useful for continuously growing data, as it allows models to be updated progressively without the need to retrain 
+them from scratch each time new data is available. This approach efficiently handles large or streaming datasets by updating the model with small 
+batches of data, making it well-suited for scenarios where data is constantly generated or added over time. 
+
 
 .. admonition:: Key Points
    :class: hint
