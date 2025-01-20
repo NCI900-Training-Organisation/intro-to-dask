@@ -17,8 +17,7 @@ Distributed Dask
 
 .. toctree::
     tutorial/DistDask/dist_intro.rst
-    tutorial/DistDask/hyper.rst 
-    tutorial/DistDask/postfit.rst
+
 
 Dask-ML
 =======
@@ -26,6 +25,9 @@ Dask-ML
 .. toctree::
 
     tutorial/Ml/dask_ml_intro
+    tutorial/Ml/hyper.rst 
+    tutorial/Ml/postfit.rst
+    tutorial/Ml/inc.rst
 
     
 
