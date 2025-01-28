@@ -7,7 +7,7 @@ Parallel Prediction
     * **Tutorial:** 20 Minutes
 
         **Objectives:**
-            #. Learn how to do parallel prediction in Dask.
+            - Learn how to do parallel prediction in Dask.
 
 `ParallelPostFit` in Dask-ML wraps around a scikit-learn model, enabling parallel prediction and transformation operations. While the model's 
 training step remains on a single machine, the predict and transform methods are executed in parallel using Dask, which is especially useful for 
@@ -45,4 +45,4 @@ The training occurs on a single node, while the prediction is distributed across
 .. admonition:: Key Points
    :class: hint
 
-    #. `ParallelPostFit` can be used to parallelize prediction across a cluster.
+        - `ParallelPostFit` can be used to parallelize prediction across a cluster.

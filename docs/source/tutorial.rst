@@ -23,7 +23,6 @@ Dask-ML
 =======
 
 .. toctree::
-
     tutorial/Ml/dask_ml_intro
     tutorial/Ml/hyper.rst 
     tutorial/Ml/postfit.rst

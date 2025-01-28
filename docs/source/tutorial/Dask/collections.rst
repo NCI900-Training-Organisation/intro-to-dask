@@ -7,8 +7,8 @@ Dask Arrays
     * **Tutorial:** 20 min
 
         **Objectives:**
-            #. Learn about Dask collections.
-            #. Learn about Dask Arrays.
+            - Learn about Dask collections.
+            - Learn about Dask Arrays.
 
 
 Dask collections are high-level abstractions provided by Dask that mimic the functionality of popular Python libraries while enabling parallel and 
@@ -33,12 +33,16 @@ Dask Arrays are deeply integrated with NumPy and designed to feel like an extens
 
 1. **API Compatibility**: Dask Arrays use an API that is nearly identical to NumPy's, so operations like slicing, reshaping, arithmetic, and linear 
 algebra work similarly. This makes it easy for NumPy users to adopt Dask.
+
 2. **Chunking**: Unlike NumPy, which requires the entire array to fit in memory, Dask Arrays divide data into chunks. Each chunk is a NumPy array, 
 allowing computations to proceed in parallel across chunks and enabling out-of-core processing (working on data that doesn't fit in memory).
+
 3. **Lazy Execution:** Dask Arrays build a task graph for computations instead of executing them immediately. For example, when you perform an 
 operation like addition, Dask doesn't compute the result right away; it schedules the computation and executes it only when .compute() is called. 
 This deferred computation helps optimize resource usage and parallelism.
+
 4. **Integration with NumPy:** Dask Arrays can be created from NumPy arrays or other array-like objects.
+
 5. **Scaling Beyond Memory:** While NumPy is limited by the memory of a single machine, Dask Arrays can scale across multiple cores or 
 machines in a cluster, allowing them to handle datasets much larger than what NumPy can process.
 
@@ -145,5 +149,5 @@ dependencies, and how they are parallelized. It can be especially useful for deb
 .. admonition:: Key Points
    :class: hint
 
-    #. Dask Arrays extend the functionality of NumPy arrays to support parallel and distributed computations.
-    #. It enables efficient processing of large datasets while maintaining a familiar API for Python developers.
+        - Dask Arrays extend the functionality of NumPy arrays to support parallel and distributed computations.
+        - It enables efficient processing of large datasets while maintaining a familiar API for Python developers.

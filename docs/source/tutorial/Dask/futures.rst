@@ -7,7 +7,7 @@ Dask Futures
     * **Tutorial:** 20 min
 
         **Objectives:**
-            #. Learn about Dask Futures.
+            - Learn about Dask Futures.
 
 
 Futures are a low-level abstraction that allows for fine-grained control over parallel and distributed computations. They represent a placeholder for 
@@ -17,18 +17,17 @@ once the computation completes. Futures allow you to execute computations in par
 Key Concepts of Dask Futures
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. **Asynchronous Computation:** Futures in Dask represent tasks that are being computed asynchronously. They don’t block the rest of your program, allowing you to continue with other work while waiting for the result.
-When you submit a task, Dask schedules it to run on available workers. A Future object is returned, which represents the eventual result of that task.
+1. **Asynchronous Computation** : Futures in Dask represent tasks that are being computed asynchronously. They don’t block the rest of your program, allowing you to continue with other work while waiting for the result. When you submit a task, Dask schedules it to run on available workers. A Future object is returned, which represents the eventual result of that task.
 
-2. **Task Graph:** A task graph is constructed when you use Dask Futures, defining the sequence of computations to be done. Each task is represented as a node, and the edges represent data dependencies. Dask uses this graph to optimize scheduling and parallelism.
+2. **Task Graph** : A task graph is constructed when you use Dask Futures, defining the sequence of computations to be done. Each task is represented as a node, and the edges represent data dependencies. Dask uses this graph to optimize scheduling and parallelism.
 
-3. **Parallel Execution:** Dask can execute multiple futures in parallel, taking advantage of available CPU cores or distributed workers. Futures allow Dask to scale computation and distribute tasks across workers, making it suitable for both small and large-scale computations.
+3. **Parallel Execution** : Dask can execute multiple futures in parallel, taking advantage of available CPU cores or distributed workers. Futures allow Dask to scale computation and distribute tasks across workers, making it suitable for both small and large-scale computations.
 
-4. **Non-blocking:** Futures allow for non-blocking execution. You can submit multiple tasks (futures) and work with them as they finish. The .result() method on a future can be used to retrieve the result once it's available. If the result isn’t ready yet, the call to `.result()` will block until the computation is finished.
+4. **Non-blocking** : Futures allow for non-blocking execution. You can submit multiple tasks (futures) and work with them as they finish. The .result() method on a future can be used to retrieve the result once it's available. If the result isn’t ready yet, the call to `.result()` will block until the computation is finished.
 
-5. **Distributed and Local Executors:** Dask Futures can run on either a local thread pool or a distributed cluster. In a distributed cluster, tasks are sent to workers across multiple machines. In a local setup, tasks are executed on the local machine using a thread pool or multiple processes.
+5. **Distributed and Local Executors** : Dask Futures can run on either a local thread pool or a distributed cluster. In a distributed cluster, tasks are sent to workers across multiple machines. In a local setup, tasks are executed on the local machine using a thread pool or multiple processes.
 
-6. **Interaction with dask.delayed():** Futures can be integrated with higher-level Dask abstractions like `dask.delayed()` to perform asynchronous computations. You can submit delayed tasks to a Dask scheduler and get back future objects that you can use to monitor or collect results when they are ready.
+6. **Interaction with dask.delayed()** : Futures can be integrated with higher-level Dask abstractions like `dask.delayed()` to perform asynchronous computations. You can submit delayed tasks to a Dask scheduler and get back future objects that you can use to monitor or collect results when they are ready.
 
 How to Use Dask Futures
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -77,5 +76,5 @@ Key Methods with Dask Futures
 .. admonition:: Key Points
    :class: hint
 
-    #. Dask futures help submit tasks for execution, track their progress, and retrieve results asynchronously
-    #. Futures provide a flexible mechanism for parallelizing custom workflows and handling complex task dependencies.
+        - Dask futures help submit tasks for execution, track their progress, and retrieve results asynchronously
+        - Futures provide a flexible mechanism for parallelizing custom workflows and handling complex task dependencies.

@@ -11,5 +11,5 @@ Reference
 Contributers
 =========
 
-1.  `Joseph John, Staff Scientist, NCI <https://www.josephjohn.org>`_
+    - `Joseph John, Staff Scientist, NCI <https://www.josephjohn.org>`_
 
