@@ -7,7 +7,7 @@ Dask ML
     * **Tutorial:** 10 Minutes
 
         **Objectives:**
-            #. Learn how to scale Machine learning codes using dask.
+            - Learn how to scale Machine learning codes using dask.
 
 
 Dask-ML provides scalable machine learning in Python using Dask alongside popular machine learning 
@@ -86,6 +86,6 @@ Some of the main use cases of using Dask-ML is discussed below.
 .. admonition:: Key Points
    :class: hint
 
-    #. Dask-ML can be used to scale compute intensive ML jobs.
-    #. Dask-ML can be used to scale memory intensive ML jobs.
-    #. Dask-ML works with most Scikit-Learn APIs. 
+        - Dask-ML can be used to scale compute intensive ML jobs.
+        - Dask-ML can be used to scale memory intensive ML jobs.
+        - Dask-ML works with most Scikit-Learn APIs. 

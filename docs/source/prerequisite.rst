@@ -2,8 +2,8 @@ Prerequisite
 ============
 
 .. important::
- #.  Experience with Python.
- #.  Experience with bash or similar Unix shells.
+    - Experience with Python.
+    - Experience with bash or similar Unix shells.
 
 This workshop assumes that you have experience coding in Python and are familiar with using Unix shell. 
 If you are using a Windows machine please make sure you have a shell that supports SSH. Windows users can either use 

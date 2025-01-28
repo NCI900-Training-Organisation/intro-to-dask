@@ -8,7 +8,7 @@ Dask Distributed
     * **Tutorial:** 1 Hour
 
         **Objectives:**
-            #. Learn about Dask Distributed.
+            - Learn about Dask Distributed.
 
 
 Dask Distributed is a powerful extension of Dask that enables parallel and distributed computing across multiple machines or a cluster of machines. 
@@ -133,32 +133,25 @@ workers using a Python client.
 .. admonition:: Explanation
    :class: attention
 
-   1. `walltime`: Specifies the maximum duration for each job submitted to the PBS scheduler. In 
-   this case, each job will run for 20 minutes. Format: HH:MM:SS.
+        1. `walltime``: Specifies the maximum duration for each job submitted to the PBS scheduler. In this case, each job will run for 20 minutes. Format: HH:MM:SS.
 
-   2. `cores`: Specifies the number of CPU cores allocated per job. Each Dask worker will 
-   utilize 48 cores for parallel processing.
+        2. `cores`: Specifies the number of CPU cores allocated per job. Each Dask worker will  utilize 48 cores for parallel processing.
 
-   3. `memory`: Specifies the total memory available for each job. Each worker will use up to 
-   192 GB of RAM.
+        3. `memory`: Specifies the total memory available for each job. Each worker will use up to 192 GB of RAM.
 
-   4. `shebang`: Defines the shebang line at the top of the job script, indicating that the script should be executed using bash.
-   This is important for environments where custom shells or paths are used.
+        4. `shebang`: Defines the shebang line at the top of the job script, indicating that the script should be executed using bash. This is important for environments where custom shells or paths are used.
 
-   5. `job_extra_directives`: Passes additional PBS directives (specified in the extra variable) to customize the job script further.
+        5. `job_extra_directives`: Passes additional PBS directives (specified in the extra variable) to customize the job script further.
 
-   6. `local_directory`: Specifies a local directory on the compute node to store temporary files for Dask workers.
+        6. `local_directory`: Specifies a local directory on the compute node to store temporary files for Dask workers.
 
-   7. `job_directives_skip`: Skips generating certain PBS directives automatically. Here, the select directive is 
-   omitted because it might conflict with how resources are allocated in the cluster. Useful for more fine-grained control over the job script.
+        7. `job_directives_skip`: Skips generating certain PBS directives automatically. Here, the select directive is omitted because it might conflict with how resources are allocated in the cluster. Useful for more fine-grained control over the job script.
 
-   8. `interface`: Specifies the network interface for inter-worker communication. `ib0` typically refers to an 
-   InfiniBand interface, used for high-speed, low-latency networking in HPC systems.
+        8. `interface`: Specifies the network interface for inter-worker communication. `ib0` typically refers to an InfiniBand interface, used for high-speed, low-latency networking in HPC systems.
 
-   9. `job_script_prologue`: Defines a list of shell commands (stored in setup_commands) to be executed before 
-   starting the Dask worker processes.
+        9. `job_script_prologue`: Defines a list of shell commands (stored in setup_commands) to be executed before starting the Dask worker processes.
 
-   10. `python=os.environ["DASK_PYTHON"]` : Specifies the Python executable to be used for running Dask worker processes.
+        10. `python=os.environ["DASK_PYTHON"]` : Specifies the Python executable to be used for running Dask worker processes.
 
 ..  code-block:: python
     :linenos:
@@ -193,7 +186,7 @@ on the HPC system.
     :linenos:
 
     def slow_increment(x):
-    return x+1
+        return x+1
 
     futures = client.submit(slow_increment, 5000)
 
@@ -207,7 +200,7 @@ on the HPC system.
 .. admonition:: Key Points
    :class: hint
 
-    #. Dask distributed uses an event-driven scheduler to manage task execution across multiple workers while respecting task dependencies.
-    #. Dask scales from a single machine to a distributed cluster, adapting to changing workloads.
-    #. Tasks and workers communicate asynchronously for efficient execution and data transfer.
+        - Dask distributed uses an event-driven scheduler to manage task execution across multiple workers while respecting task dependencies.
+        - Dask scales from a single machine to a distributed cluster, adapting to changing workloads.
+        - Tasks and workers communicate asynchronously for efficient execution and data transfer.
     

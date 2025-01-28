@@ -1,8 +1,8 @@
 Reference
 =========
-#. https://distributed.dask.org/en/stable/quickstart.html
-#. https://distributed.dask.org/en/stable/
-#. https://ml.dask.org
+    - https://distributed.dask.org/en/stable/quickstart.html
+    - https://distributed.dask.org/en/stable/
+    - https://ml.dask.org
 
 *ChatGPT has been utilized to enhance and generate texts in this document*. 
 *OpenAI. (2024). ChatGPT (August 2024 version).*
@@ -11,5 +11,5 @@ Reference
 Contributers
 =========
 
-1.  `Joseph John, Staff Scientist, NCI <https://www.josephjohn.org>`_
+    - `Joseph John, Staff Scientist, NCI <https://www.josephjohn.org>`_
 

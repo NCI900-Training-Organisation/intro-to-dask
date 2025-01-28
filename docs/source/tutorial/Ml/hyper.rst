@@ -7,7 +7,7 @@ Hyper Parameter Search
     * **Tutorial:** 20 Minutes
 
         **Objectives:**
-            #. Learn how to do hyper parameter searching in Dask.
+            - Learn how to do hyper parameter searching in Dask.
 
 Hyperparameter search is a critical step in machine learning, involving the optimization of model parameters to improve performance. 
 These searches can be highly time-consuming, often taking days particularly when working with large datasets. Dask-ML enhances 
@@ -86,4 +86,4 @@ The client is not explicitly referenced after being created, but it is used unde
 .. admonition:: Key Points
    :class: hint
 
-    #. Dask-ML can speedup hyperparameter search. 
+        - Dask-ML can speedup hyperparameter search. 

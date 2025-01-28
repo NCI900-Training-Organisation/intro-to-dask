@@ -7,7 +7,7 @@ Incremental Learning
     * **Tutorial:** 20 Minutes
 
         **Objectives:**
-            #. Learn how to do incremental learning in Dask.
+            - Learn how to do incremental learning in Dask.
 
 Some estimators can be trained incrementally, processing data without needing to load the entire dataset at once. Typically, if you pass a Dask Array to 
 an estimator that expects a NumPy array, the Dask Array will be converted into a single large NumPy array. On a single machine, this could lead to 
@@ -42,4 +42,4 @@ batches of data, making it well-suited for scenarios where data is constantly ge
 .. admonition:: Key Points
    :class: hint
 
-    #. `Incremental` can be used for incremental learning in Dask.
+        - `Incremental` can be used for incremental learning in Dask.

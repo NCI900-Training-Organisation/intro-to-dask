@@ -7,7 +7,7 @@ Distributed Learning
     * **Tutorial:** 20 Minutes
 
         **Objectives:**
-            #. Learn how to do distributed learning in Dask.
+            - Learn how to do distributed learning in Dask.
 
 Distributed learning in Dask splits both the data and computation across multiple machines or nodes in a cluster, leveraging parallelism for faster 
 training. Incremental learning focuses on processing data in smaller chunks sequentially, updating the model after each chunk, and does not 
@@ -68,4 +68,4 @@ the workers, and training happens concurrently across the distributed setup.
 .. admonition:: Key Points
    :class: hint
 
-    #. Distributed learning can help with large dataset in Dask..
+        - Distributed learning can help with large dataset in Dask..
